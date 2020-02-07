@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script list and cut all the file in the current dic
+
+ls * | cut -c 3-
