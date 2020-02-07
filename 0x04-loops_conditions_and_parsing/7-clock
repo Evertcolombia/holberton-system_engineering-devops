@@ -12,7 +12,8 @@ while [ $i -le 12 ]; do
 		(( j++ ))
 	done
 	if [ "$j" -eq 59 ]; then
-		echo "Hour: $j"
+		echo "Hour: $i"
+		$j=0
 	fi
 	(( i++ ))
 done
