@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This scrip runs a task  a number of times and use the case statemen
+
+i=1
+str1='bad luck from China'
+str2='bad luck from Japan'
+str3='bad luck from Italy'
+
+while [ $i -le 20 ]
+do
+	echo "$i"
+
+	case $i in
+		'4')
+			echo "$str1"
+		;; '9')
+			echo "$str2"
+		;; '17')
+			echo "$str3"
+		;; esac
+	(( i++ ))
+done

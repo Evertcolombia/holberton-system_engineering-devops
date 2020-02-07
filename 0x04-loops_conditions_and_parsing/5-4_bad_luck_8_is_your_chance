@@ -6,10 +6,10 @@ str='Holberton School'; str1='bad luck'; str2='good luck'
 
 while [ $i -le 10 ]
 do
-	if [ "$i" == '4' ]; then
+	if [ "$i" -eq '4' ]; then
                 echo "$str1"
 
-	elif [ "$i" == '8' ]; then
+	elif [ "$i" -eq '8' ]; then
 		echo "$str2"
 	else
 		echo "$str"
