@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This scrip runs a task a certain number of times and uses if-elif
+
+i=1
+str='Holberton School'; str1='bad luck'; str2='good luck'
+
+while [ $i -le 10 ]
+do
+	if [ "$i" == '4' ]; then
+                echo "$str1"
+
+	elif [ "$i" == '8' ]; then
+		echo "$str2"
+	else
+		echo "$str"
+	fi
+	(( i++ ))
+done
