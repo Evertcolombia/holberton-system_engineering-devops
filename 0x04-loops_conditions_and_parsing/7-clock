@@ -13,7 +13,7 @@ while [ $i -le 12 ]; do
 	done
 	if [ "$j" -eq 59 ]; then
 		echo "Hour: $i"
-		$j=0
+		(( j=0 ))
 	fi
 	(( i++ ))
 done
