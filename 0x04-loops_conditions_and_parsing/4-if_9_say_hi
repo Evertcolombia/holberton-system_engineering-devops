@@ -7,7 +7,7 @@ str='Holberton School'
 
 while [ $i -le 10 ]
 do
-	if [ "$i" == $li ]; then echo "HI"; fi
+	if [ "$i" == $li ]; then echo "Hi"; fi
 	echo "$str" 
 	(( i++ ))
 done
