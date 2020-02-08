@@ -2,7 +2,7 @@
 # This script is displaying "Holberton School" 10 times
 
 i=1
-str='HolbertonSchool'
+str='Holberton School'
 
 while [ $i -le  10 ]
 do
