@@ -2,11 +2,12 @@
 # This script prints a task 10 times and use an if condition
 
 i=1
-li=9
+li=10
 str='Holberton School'
 
 while [ $i -le 10 ]
 do
-	if [ "$i" == $li ]; then echo "HI"; else echo "$str"; fi
+	if [ "$i" == $li ]; then echo "HI"; fi
+	echo "$str" 
 	(( i++ ))
 done
