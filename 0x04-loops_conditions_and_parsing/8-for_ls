@@ -3,4 +3,7 @@
 
 list="$(ls -- *)"
 
-for i in $list; do cut -d '-' 3-| echo "$i"; done
+for i in $list
+do 
+	echo "$i" | cut --complement -d "-" -f 1
+done
