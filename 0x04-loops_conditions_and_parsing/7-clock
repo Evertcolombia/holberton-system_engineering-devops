@@ -4,16 +4,14 @@
 i=0
 j=1
 
-while [ $i -le 12 ]; do
+while [ $i -le 12 ]
+do
 	echo "Hour: $i"
+	j=1
 
 	while [ $j -lt 60 ]; do
 		echo "$j"
 		(( j++ ))
 	done
-	if [ "$j" -eq 59 ]; then
-		echo "Hour: $i"
-		(( j=0 ))
-	fi
 	(( i++ ))
 done
