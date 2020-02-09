@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # This script verificate states for a file
 
-device="/home/vagrant/holberton-system_engineering-devops/0x04-loops_conditions_and_parsing/holbertonschool"
+device=holbertonschool
 
 if [ -e $device ]; then
-	echo "holbertonschool file exist"
+	echo "holbertonschool file exists"
 
 	if [ -s $device ]; then
 		echo "holbertonschool file is not empty"
