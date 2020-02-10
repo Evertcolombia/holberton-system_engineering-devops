@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script show all the proces with the name bash in its self
+
+ps -aux | grep -h "bash"

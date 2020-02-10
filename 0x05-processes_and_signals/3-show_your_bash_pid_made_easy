@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This scrip show process d with the name bash
+
+pgrep -l bash
