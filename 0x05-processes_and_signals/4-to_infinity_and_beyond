@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script uses sleep command in a infnite loop
+
+a=0
+
+while [ $a -ne 1 ]
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
