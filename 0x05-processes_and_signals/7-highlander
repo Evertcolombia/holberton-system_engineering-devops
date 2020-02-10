@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script uses the trap command
+
+a=0
+while [ $a -ne 1 ]
+do
+	trap 'echo "I am invincible!!!"' SIGTERM
+	echo "To infinity and beyond"
+	sleep 2
+done
