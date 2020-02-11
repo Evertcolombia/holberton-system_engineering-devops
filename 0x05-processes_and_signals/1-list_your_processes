@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This scrip show all proces in system
 
-ps -aux
+ps -auxf
