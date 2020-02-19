@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# This script print hello world
+greet="Hello World"
+echo "$greet"
+
+#2
+pwd
+
+#3
+ls
+
+#4
+cat access.log
+
+#5
+tail -5 access.log
+
+#6 show the lines with the "GET" in the file
+grep "GET" access.log
+
+#7 show the files with the "500" string in all files in the current
+# directory
+grep -l "500" *
+
+#8 find the relative file paths  for all the file names that start with
+# "access.log" in the current directory
+find -name "*access.log*"
