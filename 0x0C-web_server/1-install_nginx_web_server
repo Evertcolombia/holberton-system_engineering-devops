@@ -2,8 +2,6 @@
 # Script that install Nginx Web Server
 
 sudo apt-get update
-sudo apt-get install nginx -y
-sudo systemctl start nginx
-sudo chmod 757 /var/www/html/index.nginx-debian.html
-sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sudo chmod 755 /var/www/html/index.nginx-debian.html
+sudo apt-get -y install nginx
+echo "Holberton School" >> /var/www/html/index.html
+sudo service nginx start
