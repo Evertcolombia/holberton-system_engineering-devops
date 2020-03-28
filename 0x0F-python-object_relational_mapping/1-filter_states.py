@@ -19,14 +19,14 @@ else:
     cur = db.cursor()
 
     try:
-        cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+        cur.execute("SELECT * FROM states WHERE (name REGEXP '^N')")
         rows = cur.fetchall()
     except MySQLdb.Error:
-        str = "MySQL Error [%d]: %s"
+        st = "MySQL Error [%d]: %s"
         try:
-            print(str % (MySQLdb.Error.args[0], MySQLdb.Error.args[1]))
+            print(st % (MySQLdb.Error.args[0], MySQLdb.Error.args[1]))
         except:
-            print(str % str(e))
+            print("MySQL Error [%d]: %s" % str(MySQLdb.Error))
 
     for row in rows:
         print(row)
