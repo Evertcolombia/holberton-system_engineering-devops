@@ -22,11 +22,11 @@ else:
         cur.execute("SELECT * FROM states ORDER BY states.id ASC")
         rows = cur.fetchall()
     except MySQLdb.Error:
-        str = "MySQL Error [%d]: %s"
+        str = "MySQL Error [{%d}]: {}"
         try:
-            print(str % (MySQLdb.Error.args[0], MySQLdb.Error.args[1]))
+            print(str.format(MySQLdb.Error.args[0], MySQLdb.Error.args[1]))
         except:
-            print(str % str(e))
+            print("MySQL ERROR: {}".format(str(MySQLdb.Error)))
 
     for row in rows:
         print(row)
