@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # change home ip
 
-cp /etc/host ~/host.new
+cp /etc/hosts ~/host.new
 sed -i 's/^127.*$/127.0.0.2 localhost/' ~/host.new
 sed -i '2s/^/8.8.8.8 facebook/'  ~/host.new
-cp -f ~/host.new /etc/hosts
+sudo cp -f ~/host.new /etc/hosts
