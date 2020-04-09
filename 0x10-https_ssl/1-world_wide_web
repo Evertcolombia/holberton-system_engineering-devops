@@ -8,15 +8,12 @@ func () {
   printf "The Subdomain %s is a %s record and points to %s\n" "$2" "$dns_record" "$ip_adress"
 }
 
-if [ $# == 1 ]
+if [ $# -lt 2 ]
 then
   for sub in www lb-01 web-01 web-02
   do
     func "$1" "$sub"
   done
-elif [ $# == 2 ]
-then
-  func "$1" "$2"
 else
-  exit
+  func "$1" "$2"
 fi
