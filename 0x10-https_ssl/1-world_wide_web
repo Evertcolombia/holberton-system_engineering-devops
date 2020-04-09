@@ -3,8 +3,8 @@
 
 func () {
   answer_section=$(dig $2.$1 | grep -A1 'ANSWER SECTION:')
-  dns_record=$(echo "$answer_section" | awk '{print $7}')
-  ip_adress=$(echo "$answer_section" | awk '{print $8}')
+  dns_record=$(echo $answer_section | awk '{print $7}')
+  ip_adress=$(echo $answer_section | awk '{print $8}')
   printf "The Subdomain %s is a %s record and points to %s\n" "$2" "$dns_record" "$ip_adress"
 }
 
