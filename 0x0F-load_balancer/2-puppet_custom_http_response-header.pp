@@ -6,7 +6,12 @@ exec { 'apt-get':
 }
 
 package { 'nginx':
-    ensure  => installed
+    ensure  => installed,
+    require => Exec['apt-get']
+}
+
+service { 'nginx':
+    ensure  => running
 }
 
 exec { 'mkdir-directory':
@@ -25,4 +30,9 @@ file { '/var/www/html/index.html':
 exec { 'header_response':
     command => '/bin/sed -i "60i\ \tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf',
     require => Package['nginx']
+}
+
+exec { 'restart':
+    command => '/bin/service nginx restart',
+    require => Exec['header_response']
 }
