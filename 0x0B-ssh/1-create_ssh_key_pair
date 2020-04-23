@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Creates key pair for ssh connection
-ssh-keygen -f holberton -b 4096 -N betty
+ssh-keygen -f holberton_server_02 -b 4096 -N betty

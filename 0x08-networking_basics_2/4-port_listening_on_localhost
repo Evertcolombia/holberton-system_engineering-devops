@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# concect with localchost port 80
+nc -l 98
