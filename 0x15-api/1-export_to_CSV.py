@@ -2,6 +2,7 @@
 """
 get data from an api based on the userd id that is passed as argument
 """
+
 import csv
 import requests
 from sys import argv
@@ -32,5 +33,5 @@ if __name__ == "__main__":
             for obj in todos_obj:
                 line = [obj['userId'], name, obj['completed'], obj['title']]
                 writer = csv.writer(f, delimiter=',', quotechar='"',
-                                   quoting=csv.QUOTE_ALL)
+                                    quoting=csv.QUOTE_ALL)
                 writer.writerow(line)
