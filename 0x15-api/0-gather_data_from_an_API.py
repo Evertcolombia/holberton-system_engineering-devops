@@ -36,4 +36,4 @@ if __name__ == "__main__":
         st = 'Employee {} is done with tasks({}/{}):'
         print(st.format(person_obj['name'], done_count, len(todos_obj)))
         for task in done_tasks:
-            print('\t{}'.format(task))
+            print('\t {}'.format(task))
