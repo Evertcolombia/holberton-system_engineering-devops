@@ -25,14 +25,15 @@ if __name__ == "__main__":
     for user in person_obj:
         _id = user['id']
         result = []
+
         for obj in res:
-            task = {}
-            task['username'] = user['username']
-            task['task'] = obj['title']
-            task['completed'] = obj['completed']
-            result.append(task)
-        total[user['id']] = result
+            if _id == obj['userId']:
+                task = {}
+                task['username'] = user['username']
+                task['task'] = obj['title']
+                task['completed'] = obj['completed']
+                result.append(task)
+        total[_id] = result
 
     with open('todo_all_employees.json', 'w') as f:
-        for el in total:
-            json.dump(total, f)
+        json.dump(total, f)
