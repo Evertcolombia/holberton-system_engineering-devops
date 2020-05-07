@@ -14,10 +14,8 @@ if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/users/'
     todos = 'https://jsonplaceholder.typicode.com/todos/'
 
-    persons_res = requests.get(url)
-    todos_res = requests.get(todos)
-    person_obj = persons_res.json()
-    res = todos_res.json()
+    person_obj = requests.get(url).json()
+    res = requests.get(todos).json()
 
     """ working with the data """
     total = {}
@@ -29,9 +27,9 @@ if __name__ == "__main__":
         for obj in res:
             if _id == obj['userId']:
                 task = {}
-                task['username'] = user['username']
                 task['task'] = obj['title']
                 task['completed'] = obj['completed']
+                task['username'] = user['username']
                 result.append(task)
         total[_id] = result
 
