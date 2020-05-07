@@ -12,9 +12,12 @@ from sys import argv
 if __name__ == "__main__":
 
     url = 'https://jsonplaceholder.typicode.com/users/'
+    todos = 'https://jsonplaceholder.typicode.com/todos/'
 
     persons_res = requests.get(url)
+    todos_res = requests.get(todos)
     person_obj = persons_res.json()
+    res = todos_res.json()
 
     """ working with the data """
     total = {}
@@ -22,8 +25,6 @@ if __name__ == "__main__":
     for user in person_obj:
         _id = user['id']
         result = []
-        res = requests.get('{}{}/todos'.format(url, _id)).json()
-
         for obj in res:
             task = {}
             task['username'] = user['username']
