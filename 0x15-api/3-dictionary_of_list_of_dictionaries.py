@@ -26,9 +26,9 @@ if __name__ == "__main__":
 
         for obj in res:
             task = {}
+            task['username'] = user['username']
             task['task'] = obj['title']
             task['completed'] = obj['completed']
-            task['username'] = user['username']
             result.append(task)
         total[user['id']] = result
 
